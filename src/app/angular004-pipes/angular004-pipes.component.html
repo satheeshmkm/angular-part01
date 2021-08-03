@@ -1,0 +1,38 @@
+<p>angular004-pipes works!</p>
+
+<h1>String pipe operators </h1>
+<h3>{{name | uppercase}}</h3>
+<h3>{{houseName | lowercase}}</h3>
+<h3>{{message | titlecase}}</h3>
+
+<h1>Date pipe operators </h1>
+<h3>{{dateObj}}</h3>
+<h3>{{dateObj | date}}</h3>
+<h3>{{dateObj | date:'shortDate'}}</h3>
+<h3>{{dateObj | date:'mediumDate'}}</h3> <!-- mediumDate is the default parameter for date-->
+<h3>{{dateObj | date:'longDate'}}</h3>
+
+<h1>Time pipe operators </h1>
+<h3>{{dateObj | date:'shortTime'}}</h3>
+<h3>{{dateObj | date:'mediumTime'}}</h3>
+<h3>{{dateObj | date:'longTime'}}</h3>
+
+<h1>Number pipe operators </h1>
+<h3>{{total}}</h3>
+<h3>{{total | number}}</h3>
+<h3>{{total | number:'3.5'}}</h3>
+
+<h1>Float Number pipe operators </h1>
+<h3>{{totalNew}}</h3>
+<h3>{{totalNew | number}}</h3>
+<h3>{{totalNew | number:'2'}}</h3>
+<h3>{{totalNew | number:'2.2'}}</h3>
+<h3>{{totalNew | number:'2.2-4'}}</h3> <!-- Minimum 2 fractions, maximum 4 fractions -->
+
+<h1>Currency pipe operators </h1>
+<h3>{{price}}</h3>
+<h3>{{price | currency}}</h3> <!-- Default currency is US $ -->
+<h3>{{price | currency:'GBP'}}</h3>
+<h3>{{price | currency:'EUR'}}</h3>
+<h3>{{price | currency:'INR'}}</h3>
+<h3>{{price | currency:'JPY'}}</h3>

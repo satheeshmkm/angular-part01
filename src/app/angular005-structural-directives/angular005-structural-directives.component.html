@@ -1,0 +1,45 @@
+<p>angular005-structural-directives works!</p>
+<h1>*ngIf</h1>
+<h2>value of isAdded = {{isAdded}}</h2>
+<h2 *ngIf="isAdded">{{successMessage}}</h2> <!---->
+<h1>Displaying message based on button click</h1>
+<div *ngIf="isVisible; then ramesh; else satheesh"></div>
+<ng-template #ramesh>I am an Angular Trainer</ng-template>
+<ng-template #satheesh>I am an Angular Student</ng-template>
+<button (click)="changeVisible()">Click Me!</button> 
+<!-- Event binding 
+    () to mention the event
+    = function
+-->
+<h1>*ngSwitch</h1>
+<div [ngSwitch]="myName"> <!-- propery binding in []-->
+    <div *ngSwitchCase="'satheesh'">I am an angular Student</div>
+    <div *ngSwitchCase="'ramesh'">I am an angular Trainer</div>
+    <div *ngSwitchCase="'prabhas'">I am a film star</div>
+    <div *ngSwitchCase=12>Number 12 is accepted value</div>
+    <div *ngSwitchDefault>We don't have your information</div> <!-- default value-->
+</div>
+
+<h1>*ngFor</h1>
+<ul>
+    <li *ngFor="let stu of students">{{stu.name}} </li> <!-- let , of  are keywords-->
+</ul>
+
+<table width =100%  cellspacing=0>
+    <tr>
+        <td>Sl No</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Gender</td>
+        <td colspan="2">Action</td>
+    </tr>
+    <tr *ngFor="let stu of students; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{stu.name |angular007AddSubTitle:stu.gender}}</td>
+        <td>{{stu.email}}</td>
+        <td>{{stu.gender}}</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+</table>
+<h2 appChangeHtmlElement> My name is Satheesh</h2>
